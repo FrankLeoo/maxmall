@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.maxmall.provider.merchant.mapper.account.AccountDOMapper">
+    <!-- 自动生成,请修改 SSC_ACCOUNT.xml -->
+    <resultMap id="BaseResultMap" type="com.maxmall.provider.merchant.model.domain.account.AccountDO">
+        <id column="id" property="id" jdbcType="BIGINT" javaType="Long"/>
+
+        <result column="creator_id" property="creatorId" jdbcType="BIGINT" javaType="Long"/>
+        <result column="merchant_id" property="merchantId" jdbcType="BIGINT" javaType="Long"/>
+        <result column="last_operator_id" property="lastOperatorId" jdbcType="BIGINT" javaType="Long"/>
+        <result column="icon" property="icon" jdbcType="VARCHAR" javaType="String"/>
+        <result column="note" property="note" jdbcType="VARCHAR" javaType="String"/>
+        <result column="phone" property="phone" jdbcType="VARCHAR" javaType="String"/>
+        <result column="creator" property="creator" jdbcType="VARCHAR" javaType="String"/>
+        <result column="login_pwd" property="loginPwd" jdbcType="VARCHAR" javaType="String"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR" javaType="String"/>
+        <result column="login_name" property="loginName" jdbcType="VARCHAR" javaType="String"/>
+        <result column="merchant_sn" property="merchantSn" jdbcType="VARCHAR" javaType="String"/>
+        <result column="last_login_ip" property="lastLoginIp" jdbcType="VARCHAR" javaType="String"/>
+        <result column="last_operator" property="lastOperator" jdbcType="VARCHAR" javaType="String"/>
+        <result column="last_login_location" property="lastLoginLocation" jdbcType="VARCHAR" javaType="String"/>
+        <result column="is_master" property="isMaster" jdbcType="BIT" javaType="Boolean"/>
+        <result column="status" property="status" jdbcType="INTEGER" javaType="Integer"/>
+        <result column="user_source" property="userSource" jdbcType="INTEGER" javaType="Integer"/>
+        <result column="last_login_time" property="lastLoginTime" jdbcType="INTEGER" javaType="Integer"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        t.id as id
+        ,t.creator_id as creatorId
+        ,t.merchant_id as merchantId
+        ,t.last_operator_id as lastOperatorId
+        ,t.icon as icon
+        ,t.note as note
+        ,t.phone as phone
+        ,t.creator as creator
+        ,t.login_pwd as loginPwd
+        ,t.user_name as userName
+        ,t.login_name as loginName
+        ,t.merchant_sn as merchantSn
+        ,t.last_login_ip as lastLoginIp
+        ,t.last_operator as lastOperator
+        ,t.last_login_location as lastLoginLocation
+        ,t.is_master as isMaster
+        ,t.status as status
+        ,t.user_source as userSource
+        ,t.last_login_time as lastLoginTime
+        ,t.update_time as updateTime
+        ,t.create_time as createTime
+    </sql>
+
+    <select id="findByLoginName" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        from
+        ssc_account t
+        WHERE
+        t.login_name=#{loginName,jdbcType=VARCHAR}
+    </select>
+
+    <select id="findByPhone" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        from
+        ssc_account t
+        WHERE
+        t.phone=#{phone,jdbcType=VARCHAR}
+    </select>
+
+</mapper>

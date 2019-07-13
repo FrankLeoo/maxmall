@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: native
+  application:
+    name: maxmall-discovery
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/
+    instance:
+      instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+spring:
+  security: # 配置中心的用户名密码
+    basic:
+      enabled: true
+    user:
+      name: admin
+      password: admin
+logging:
+  level.root: info
+  path: logs/
+  file: ${spring.application.name}.log

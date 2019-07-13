@@ -1,0 +1,146 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: maxmall-provider-marketing
+  aop:
+    proxy-target-class: true
+    auto: true
+  redis:
+    host: 127.0.0.1
+    password:
+    port: 6379
+    timeout: 6000ms
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+  jackson:
+    joda-date-time-format: yyyy-MM-dd HH:mm:ss
+    date-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/db_maxmall?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password:
+    filters: stat,wall
+    druid:
+      initial-size: 50
+      min-idle: 50
+      max-active: 100
+      test-on-borrow: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      web-stat-filter:
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+      stat-view-servlet:
+        allow:
+        login-username: admin
+        login-password: admin
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      cluster-nodes: 127.0.0.1:9300
+      cluster-name: elasticsearch_ivoter
+  mail:
+    host: smtp.163.com
+    username: maxmallTest@163.com
+    password: a123456
+    port: 465
+    protocol: smtp
+    test-connection: false
+    default-encoding: UTF-8
+    properties:
+      mail:
+        debug: true
+        smtp:
+          auth: true
+          connectiontimeout: 10000
+          timeout: 10000
+          writetimeout: 10000
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            port: 465
+          starttls:
+            enable: true
+            required: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+ribbon:
+  eager-load:
+    enabled: true
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: false
+  ConnectTimeout: 60000
+  ReadTimeout: 20000
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+mybatis:
+  type-aliases-package: com.maxmall.provider.merchant.model.domain
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+mapper:
+  mappers: com.maxmall.common.core.mybatis.MyMapper
+  not-empty: false
+  identity: MYSQL
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+maxmall:
+  enableSqlLogInterceptor: false
+  zk:
+    zkAddressList: 127.0.0.1:2181
+  auth:
+    rest-pwd-url: http://127.0.0.1:8000/resetPwd?resetPwdKey=
+    active-user-url: http://127.0.0.1:8000/auth/activeUser/
+  token:
+    interceptor:
+      enable: true
+  security:
+    code:
+      image:
+        expireIn: 180
+        url:
+      sms:
+        expireIn: 600
+        url: /auth/register
+        mobileMaxSendCount: 1
+        ipMaxSendCount: 2
+        totalMaxSendCount: 3
+
+jwt:
+  secret: maxmall-secret
+  access_token_expiration: 86400 # 一天 过期
+  refresh_token_expiration: 604800 # 一周 过期

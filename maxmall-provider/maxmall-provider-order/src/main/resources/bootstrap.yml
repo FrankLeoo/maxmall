@@ -1,0 +1,20 @@
+#spring:
+#  profiles:
+#    active: dev
+#  cloud:
+#    config:
+#      fail-fast: true
+#      discovery:
+#        service-id: maxmall-discovery
+#        enabled: true
+#      label: ${spring.profiles.active}
+#      profile: ${spring.profiles.active}
+#      username: admin
+#      password: admin
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://root:root@localhost:8761/eureka/
+#  instance:
+#    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${resource.port}

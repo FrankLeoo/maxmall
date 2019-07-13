@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: maxmall-eureka
+  security:
+    user:
+      name: root
+      password: root

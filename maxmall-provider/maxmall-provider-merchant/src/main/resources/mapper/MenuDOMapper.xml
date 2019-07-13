@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.maxmall.provider.merchant.mapper.account.MenuDOMapper">
+    <!-- 自动生成,请修改 SSC_MENU.xml -->
+    <resultMap id="BaseResultMap"  type="com.maxmall.provider.merchant.model.domain.account.MenuDO">
+        <id column="id" property="id" jdbcType="BIGINT" javaType="Long"/>
+        
+        <result column="pid" property="pid" jdbcType="BIGINT" javaType="Long"/>
+        <result column="creator_id" property="creatorId" jdbcType="BIGINT" javaType="Long"/>
+        <result column="last_operator_id" property="lastOperatorId" jdbcType="BIGINT" javaType="Long"/>
+        <result column="url" property="url" jdbcType="VARCHAR" javaType="String"/>
+        <result column="icon" property="icon" jdbcType="VARCHAR" javaType="String"/>
+        <result column="creator" property="creator" jdbcType="VARCHAR" javaType="String"/>
+        <result column="permission" property="permission" jdbcType="VARCHAR" javaType="String"/>
+        <result column="menu_name" property="menuName" jdbcType="VARCHAR" javaType="String"/>
+        <result column="menu_code" property="menuCode" jdbcType="VARCHAR" javaType="String"/>
+        <result column="description" property="description" jdbcType="VARCHAR" javaType="String"/>
+        <result column="last_operator" property="lastOperator" jdbcType="VARCHAR" javaType="String"/>
+        <result column="sort" property="sort" jdbcType="INTEGER" javaType="Integer"/>
+        <result column="type" property="type" jdbcType="INTEGER" javaType="Integer"/>
+        <result column="status" property="status" jdbcType="INTEGER" javaType="Integer"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        t.id as id
+        ,t.pid as pid
+        ,t.creator_id as creatorId
+        ,t.last_operator_id as lastOperatorId
+        ,t.url as url
+        ,t.icon as icon
+        ,t.creator as creator
+        ,t.permission as permission
+        ,t.menu_name as menuName
+        ,t.menu_code as menuCode
+        ,t.description as description
+        ,t.last_operator as lastOperator
+        ,t.sort as sort
+        ,t.type as type
+        ,t.status as status
+        ,t.update_time as updateTime
+        ,t.create_time as createTime
+    </sql>
+
+    <select id="selectMenuByRoleIds" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        From
+        ssc_menu t
+        WHERE
+        1 =1
+        AND t.status = 0
+        AND exists(
+          SELECT menu_id From ssc_role_menu WHERE menu_id=t.id AND role_id IN
+            <foreach collection="roleIds" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        )
+    </select>
+
+</mapper>

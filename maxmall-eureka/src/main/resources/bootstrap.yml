@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    inetutils:
+      ignoredInterfaces:
+        - docker0
+        - veth.*
+        - VM.*
+      preferredNetworks:
+        - 192.168
+  security:
+    basic:
+      enabled: false
+    user:
+      name: root
+      password: root
+eureka:
+  server:
+    enable-self-preservation: false #自我保护模式
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false #注册自身到server
+    fetchRegistry: false      #从server拉取注册信息
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
