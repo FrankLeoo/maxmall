@@ -39,9 +39,16 @@ maxmall<br>
 
 ## 项目文档
 营销中心：[https://shimo.im/docs/2473QyXLPlEF13wP/]<br>
+![营销中心-文档.png](https://github.com/FrankLeoo/maxmall/blob/master/document/系统微服务/营销中心-文档.png)
+
 商品中心：[https://shimo.im/docs/65bqnrvlMvDIvqyn/]<br>
+![商品中心-文档.png](https://github.com/FrankLeoo/maxmall/blob/master/document/系统微服务/商品中心-文档.png)
+
 订单中心：[https://shimo.im/docs/dL9kBMz8NDdTYqK5/]<br>
+![订单中心-文档.png](https://github.com/FrankLeoo/maxmall/blob/master/document/系统微服务/订单中心-文档.png)
+
 商户中心：[https://shimo.im/docs/0m8AZVlDe7bU5Aba/]<br>
+![商户中心-文档.png](https://github.com/FrankLeoo/maxmall/blob/master/document/系统微服务/商户中心-文档.png)
 
 ## 技术选型
 ### 前端技术
