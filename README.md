@@ -19,23 +19,23 @@ GIT地址 ：https://github.com/FrankLeoo
 
 ## 项目结构
 maxmall
-|____maxmall-common（基础common项目）
-|________maxmall-common-base（通用静态类、异常、枚举等）
-|________maxmall-common-config（项目通用配置config）
-|--------maxmall-common-core（项目核心基础包：redis、mybatis、拦截器和注解等）
-|--------maxmall-common-security（security核心包：Authorize配置文件、jwt配置、验证码拦截）
-|--------maxmall-common-util（项目工具类：分页、时间工具、tree工具等多种工具）
-|--------maxmall-common-zk（分布式ID生成器zk实现）
-|----maxmall-dalgen（mybatis dalge生成器）
-|----maxmall-discovery（spring config配置中心）
-|----maxmall-eureka（eureka分布式注册发现中心）
-|----maxmall-provider（后端项目）
-|--------maxmall-provider-marketing（会员营销中心）
-|--------maxmall-provider-merchant（分销商商户中心）
-|--------maxmall-provider-order（订单支付中心）
-|--------maxmall-provider-product（商品中心）
-|----maxmall-provider-api（项目接口）
-|--------maxmall-provider-product-api（feign接口配置）
+|----maxmall-common（基础common项目)<br>
+|--------maxmall-common-base（通用静态类、异常、枚举等）<br>
+|--------maxmall-common-config（项目通用配置config）<br>
+|--------maxmall-common-core（项目核心基础包：redis、mybatis、拦截器和注解等）<br>
+|--------maxmall-common-security（security核心包：Authorize配置文件、jwt配置、验证码拦截）<br>
+|--------maxmall-common-util（项目工具类：分页、时间工具、tree工具等多种工具）<br>
+|--------maxmall-common-zk（分布式ID生成器zk实现）<br>
+|----maxmall-dalgen（mybatis dalge生成器）<br>
+|----maxmall-discovery（spring config配置中心）<br>
+|----maxmall-eureka（eureka分布式注册发现中心）<br>
+|----maxmall-provider（后端项目）<br>
+|--------maxmall-provider-marketing（会员营销中心）<br>
+|--------maxmall-provider-merchant（分销商商户中心）<br>
+|--------maxmall-provider-order（订单支付中心）<br>
+|--------maxmall-provider-product（商品中心）<br>
+|----maxmall-provider-api（项目接口）<br>
+|--------maxmall-provider-product-api（feign接口配置）<br>
 
 ## 技术选型
 ### 前端技术
