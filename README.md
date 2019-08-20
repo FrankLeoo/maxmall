@@ -18,7 +18,7 @@ GIT地址 ：https://github.com/FrankLeoo
 ![4.gif](https://github.com/FrankLeoo/maxmall/blob/master/document/系统微服务/4.gif)
 
 ## 项目结构
-maxmall
+maxmall<br>
 |----maxmall-common（基础common项目)<br>
 |--------maxmall-common-base（通用静态类、异常、枚举等）<br>
 |--------maxmall-common-config（项目通用配置config）<br>
