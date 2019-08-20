@@ -37,6 +37,12 @@ maxmall<br>
 |----maxmall-provider-api（项目接口）<br>
 |--------maxmall-provider-product-api（feign接口配置）<br>
 
+## 项目文档
+营销中心：[https://shimo.im/docs/2473QyXLPlEF13wP/]
+商品中心：[https://shimo.im/docs/65bqnrvlMvDIvqyn/]
+订单中心：[https://shimo.im/docs/dL9kBMz8NDdTYqK5/]
+商户中心：[https://shimo.im/docs/0m8AZVlDe7bU5Aba/]
+
 ## 技术选型
 ### 前端技术
 | 技术 | 说明 | 官网 |
