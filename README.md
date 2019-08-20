@@ -19,9 +19,9 @@ GIT地址 ：https://github.com/FrankLeoo
 
 ## 项目结构
 maxmall
-|----maxmall-common（基础common项目）
-|--------maxmall-common-base（通用静态类、异常、枚举等）
-|--------maxmall-common-config（项目通用配置config）
+|____maxmall-common（基础common项目）
+|________maxmall-common-base（通用静态类、异常、枚举等）
+|________maxmall-common-config（项目通用配置config）
 |--------maxmall-common-core（项目核心基础包：redis、mybatis、拦截器和注解等）
 |--------maxmall-common-security（security核心包：Authorize配置文件、jwt配置、验证码拦截）
 |--------maxmall-common-util（项目工具类：分页、时间工具、tree工具等多种工具）
@@ -36,6 +36,7 @@ maxmall
 |--------maxmall-provider-product（商品中心）
 |----maxmall-provider-api（项目接口）
 |--------maxmall-provider-product-api（feign接口配置）
+
 ## 技术选型
 ### 前端技术
 | 技术 | 说明 | 官网 |
