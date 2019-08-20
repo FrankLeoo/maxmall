@@ -9,13 +9,13 @@ MaxMall电商分销系统分为maxmall java后端管理系统、maxmall-portal v
 演示地址：[http://106.52.183.251](http://106.52.183.251/)
 GIT地址 ：https://github.com/FrankLeoo
 
-![1.gif](https://upload-images.jianshu.io/upload_images/10436362-b4e75b1b44fa7f17.gif?imageMogr2/auto-orient/strip)
+![1.gif](https://github.com/FrankLeoo/maxmall/blob/master/document/系统微服务/1.gif)
 
-![2.gif](https://upload-images.jianshu.io/upload_images/10436362-1541244674b33871.gif?imageMogr2/auto-orient/strip)
+![2.gif](https://github.com/FrankLeoo/maxmall/blob/master/document/系统微服务/2.gif)
 
-![3.gif](https://upload-images.jianshu.io/upload_images/10436362-75e41521796353f8.gif?imageMogr2/auto-orient/strip)
+![3.gif](https://github.com/FrankLeoo/maxmall/blob/master/document/系统微服务/3.gif)
 
-![4.gif](https://upload-images.jianshu.io/upload_images/10436362-6c9a7c08498abdfe.gif?imageMogr2/auto-orient/strip)
+![4.gif](https://github.com/FrankLeoo/maxmall/blob/master/document/系统微服务/4.gif)
 
 ## 项目结构
 maxmall
