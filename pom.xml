@@ -28,7 +28,7 @@
         <mybatis.plus.version>2.0.7</mybatis.plus.version>
         <mapper.version>3.5.2</mapper.version>
         <maxmall.version>1.0-SNAPSHOT</maxmall.version>
-        <mysql.version>8.0.8-dmr</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
         <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
